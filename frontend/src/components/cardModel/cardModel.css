@@ -1,0 +1,36 @@
+.cardModel {
+  width: 15vw;
+  height: auto;
+  filter: blur(0px);
+  border: solid 0.15vw var(--black);
+  background-color: rgb(242, 237, 230);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1vw;
+  border-radius: 2vw;
+}
+
+.cardText {
+  font-family: var(--text);
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.cardModel h2 {
+  text-align: center;
+  color: var(--red);
+  font-size: 1.6vw;
+}
+
+.note {
+  font-size: 1.3vw;
+  color: var(--red);
+  text-align: end;
+}
+
+.pictoResto {
+  width: 8vw;
+}

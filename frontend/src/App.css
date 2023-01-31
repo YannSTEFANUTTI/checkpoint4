@@ -1,0 +1,25 @@
+@font-face {
+  font-family: "Bradley Hand";
+  src: url("../src/assets/bradhitc.ttf");
+}
+
+:root {
+  --yellow: rgb(246, 166, 0);
+  --black: rgb(104, 94, 81);
+  --white: rgb(242, 237, 230);
+  --red: rgb(111, 13, 13);
+  --text: "Montserrat", sans-serif;
+  --title: "Bradley Hand";
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow: hidden;
+}

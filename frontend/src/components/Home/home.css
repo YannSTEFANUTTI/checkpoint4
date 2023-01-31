@@ -1,0 +1,51 @@
+.home {
+  background-color: var(--white);
+  width: 100vw;
+  height: 100vh;
+  background-position: fixed;
+}
+
+.home h1,
+h2,
+h3 {
+  font-family: var(--title);
+  font-weight: 900;
+  padding: 0;
+  margin: 0;
+  margin-top: 1vw;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  line-height: 1vw;
+}
+
+.allFood {
+  position: absolute;
+  width: 130%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  filter: blur(0px);
+}
+
+.logo01 {
+  position: absolute;
+  width: 15vw;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.cardsContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  gap: 1vw;
+}
