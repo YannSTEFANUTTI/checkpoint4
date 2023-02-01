@@ -14,9 +14,11 @@
   border-radius: 2vw;
   padding: 0vw;
   border: solid 0.15vw var(--black);
+  position: fixed;
 }
 
 .cardCreate {
+  position: fixed;
   width: 25vw;
   height: auto;
   border: solid 0.15vw var(--black);
@@ -147,4 +149,24 @@ textarea {
   font-size: 1vw;
   font-family: var(--title);
   font-weight: 900;
+  cursor: pointer;
+}
+
+.closeCrossCreateFlex {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.closeCrossCreate {
+  cursor: pointer;
+  width: 1.5vw;
+  height: 1.5vw;
+  font-size: 1vw;
+  font-family: var(--text);
+  font-weight: 700;
+  border: solid 0.07vw var(--black);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

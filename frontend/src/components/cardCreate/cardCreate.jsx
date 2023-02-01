@@ -1,28 +1,32 @@
+/* eslint-disable import/no-unresolved */
 import axios from "axios";
 import { useState } from "react";
+import { useRestaurantContext } from "../../contexts/RestaurantContext";
 import resto01 from "../../assets/img/resto01.png";
 import "./cardCreate.css";
 
 function CardCreate() {
+  const { CardCreateVisible, switchCreate } = useRestaurantContext();
   const [restaurant, setRestaurant] = useState({
     name: "",
     address: "",
     resume: "",
     note: "",
     phone: "",
-    city_id: "",
+    city_id: "0",
   });
   const handleChange = (event) => {
     setRestaurant({ ...restaurant, [event.target.name]: event.target.value });
   };
 
-  console.warn(restaurant, "RESTAURANT");
+  console.warn(CardCreateVisible);
 
   const handleSubmit = (event) => {
     event.preventDefault();
     axios
       .post("http://localhost:5000/restaurants", {
         name: restaurant.name,
+        image: 1,
         address: restaurant.address,
         resume: restaurant.resume,
         phone: restaurant.phone,
@@ -35,12 +39,23 @@ function CardCreate() {
       .catch((error) => {
         console.error(error);
       });
+    window.location.reload();
   };
 
   return (
     <div className="cardCreateContainer">
       <div className="cardCreate">
         <form key={restaurant.id}>
+          <div className="closeCrossCreateFlex">
+            <div
+              className="closeCrossCreate"
+              onClick={switchCreate}
+              role="presentation"
+            >
+              X
+            </div>
+          </div>
+
           <div className="pictoFlex">
             <img
               src={resto01}
@@ -73,8 +88,12 @@ function CardCreate() {
                   name="city_id"
                   onChange={handleChange}
                 >
+                  <option value="0">Ville</option>
                   <option value="1">Narbonne</option>
                   <option value="2">Paris</option>
+                  <option value="3">Pessac</option>
+                  <option value="4">Bègles</option>
+                  <option value="5">Cergy</option>
                 </select>
               </p>
             </div>

@@ -20,3 +20,28 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
+.openCreateFlex {
+  position: absolute;
+  width: auto;
+  height: auto;
+  top: 50%;
+  right: 0;
+  transform: translate(-50%, 0);
+  cursor: pointer;
+  background-color: var(--yellow);
+  border: solid 0.15vw var(--black);
+  border-radius: 2vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  padding: 1vw;
+}
+
+.openCreate {
+  font-size: 1.5vw;
+  font-weight: 900;
+  font-family: var(--title);
+  text-align: center;
+}

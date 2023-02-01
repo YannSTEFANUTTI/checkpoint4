@@ -6,10 +6,11 @@ import allFood from "../../assets/img/allFood.png";
 import logo01 from "../../assets/img/logo01.png";
 import CardModel from "../cardModel/CardModel";
 import CardCreate from "../cardCreate/cardCreate";
+import { useRestaurantContext } from "../../contexts/RestaurantContext";
 
 function Home() {
+  const { CardCreateVisible, switchCreate } = useRestaurantContext();
   const [restaurants, setRestaurants] = useState([]);
-
   useEffect(() => {
     axios.get("http://localhost:5000/restaurants").then((response) => {
       setRestaurants(response.data);
@@ -22,7 +23,16 @@ function Home() {
     <div className="home">
       <img src={allFood} alt="allFood" className="allFood" />
       <img src={logo01} alt="logo01" className="logo01" />
-      <CardCreate />
+      {CardCreateVisible && <CardCreate />}
+      <div
+        className="openCreateFlex"
+        onClick={switchCreate}
+        role="presentation"
+      >
+        <div className="openCreate">
+          Nouveau <br /> Restaurant
+        </div>
+      </div>
       <div className="cardsContainer">
         {restaurants.map((el) => (
           <CardModel
