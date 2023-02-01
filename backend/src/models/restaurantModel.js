@@ -37,20 +37,10 @@ const addRestaurant = (name, image, address, resume, phone, note, city_id) => {
   );
 };
 
-const editRestaurant = (
-  name,
-  image,
-  address,
-  resume,
-  phone,
-  note,
-  city_id,
-  id
-) => {
-  return db.query(
-    "UPDATE restaurant SET name = ?, image= ?, address = ?, resume= ?, phone= ?, note= ? WHERE id = ?",
-    [name, image, address, resume, phone, note, city_id, id]
-  );
+const editRestaurant = (payload, id) => {
+  return db
+    .query("UPDATE restaurant SET ? WHERE id = ?", [payload, id])
+    .then(([result]) => result);
 };
 
 const deleteRestaurant = (id) => {

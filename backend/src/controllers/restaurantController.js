@@ -31,11 +31,11 @@ const restaurantController = {
   },
   editRestaurant: (req, res) => {
     const { id } = req.params;
-    const { name, image, address, resume, phone, note } = req.body;
+    const resto = req.body;
     console.warn(req.body);
     console.warn(req.params);
     restaurantModel
-      .editRestaurant(id, name, image, address, resume, phone, note)
+      .editRestaurant(resto, id)
       .then((result) => {
         if (result.affectedRows !== 1) {
           return res.status(404).send(`Restaurant ${id} not found`);
