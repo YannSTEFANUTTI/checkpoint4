@@ -1,0 +1,150 @@
+.cardCreateContainer {
+  width: 70vw;
+  height: 98vh;
+  backdrop-filter: blur(10px);
+  position: absolute;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 2vw;
+  padding: 0vw;
+  border: solid 0.15vw var(--black);
+}
+
+.cardCreate {
+  width: 25vw;
+  height: auto;
+  border: solid 0.15vw var(--black);
+  background-color: rgb(242, 237, 230, 0.9);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1vw;
+  border-radius: 2vw;
+  font-size: 1vw;
+}
+
+.pictoRestoCreate {
+  width: 8vw;
+  height: auto;
+}
+
+.pictoFlex {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.nameCreate {
+  color: var(--red);
+  text-align: center;
+  margin-top: 1vw;
+  height: auto;
+  text-align: center;
+  color: var(--red);
+  font-size: 1.4vw;
+}
+.cardCreate h1,
+h2,
+h3,
+p {
+  font-family: var(--title);
+  font-weight: 900;
+  padding: 0;
+  margin: 0;
+  margin-top: 0vw;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+}
+
+.cardCreate p {
+  font-size: 1.3vw;
+  text-decoration: underline;
+  text-decoration-color: var(--red);
+}
+
+.cardTextCreate {
+  font-family: var(--text);
+  width: 22vw;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.noteCreate {
+  font-size: 1vw;
+  color: var(--red);
+  text-align: end;
+  margin-top: 0.5vw;
+  height: auto;
+}
+
+.noteCreate input {
+  width: 3vw;
+  text-align: center;
+}
+
+.detailsBlocksCreate {
+  border: solid 0.1vw var(--black);
+  border-radius: 1vw;
+  padding: 0.5vw;
+  margin-top: 0.5vw;
+}
+
+.detailsBlocksCreate h3 {
+  text-decoration: underline;
+  text-decoration-color: var(--red);
+}
+
+.inputAddress {
+  width: 20vw;
+}
+
+.inputCity {
+  width: 20vw;
+}
+
+.inputAddress {
+  width: 20vw;
+}
+
+.resumeCreate {
+  height: 10vw;
+}
+
+.resumeCreate textarea {
+  height: 6.5vw;
+  width: 20vw;
+}
+
+.cardCreate input,
+select,
+textarea {
+  border: solid 0.07vw var(--black);
+  border-radius: 1vw;
+  padding: 0.6vw;
+  margin: 0.3vw;
+  font-family: var(--text);
+  font-size: 0.9vw;
+}
+
+.cardCreate select {
+  width: 12vw;
+}
+
+.cardCreate button {
+  width: auto;
+  height: auto;
+  border: solid 0.07vw var(--black);
+  border-radius: 1vw;
+  padding: 0.5vw;
+  font-size: 1vw;
+  font-family: var(--title);
+  font-weight: 900;
+}

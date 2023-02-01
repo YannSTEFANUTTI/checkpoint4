@@ -7,18 +7,18 @@ function CardModel({ name, adress, city, phone, resume, note }) {
     <div className="cardModel">
       <img src={resto01} alt="Picto Restaurant" className="pictoResto" />
       <div className="cardText">
-        <h2>{name}</h2>
-        <div>
+        <h2 className="name">{name}</h2>
+        <div className="detailsBlocks">
           <h3>ADRESS</h3>
           <p>
             {adress} <p>{city}</p>
           </p>
         </div>
-        <div>
+        <div className="detailsBlocks">
           <h3>PHONE</h3>
           <p>{phone}</p>
         </div>
-        <div>
+        <div className="detailsBlocks resume">
           <h3>RESUME</h3>
           <p>{resume}</p>
         </div>

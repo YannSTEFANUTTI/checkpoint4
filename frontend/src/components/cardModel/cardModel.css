@@ -1,3 +1,17 @@
+.cardsContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  width: 80vw;
+  height: auto;
+  gap: 2vw;
+  margin: auto;
+  margin-top: 2vw;
+  margin-bottom: 2vw;
+}
+
 .cardModel {
   width: 15vw;
   height: auto;
@@ -10,27 +24,61 @@
   padding: 1vw;
   border-radius: 2vw;
 }
+.name {
+  color: var(--red);
+  text-align: center;
+  margin-top: 1vw;
+  height: auto;
+  text-align: center;
+  color: var(--red);
+  font-size: 1.4vw;
+}
+.cardModel h1,
+h2,
+h3 {
+  font-family: var(--title);
+  font-weight: 900;
+  padding: 0;
+  margin: 0;
+  margin-top: 0vw;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+}
 
 .cardText {
   font-family: var(--text);
+  width: 100%;
   height: auto;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
-.cardModel h2 {
-  text-align: center;
-  color: var(--red);
-  font-size: 1.6vw;
-}
-
 .note {
   font-size: 1.3vw;
   color: var(--red);
   text-align: end;
+  margin-top: 0.5vw;
+  height: auto;
 }
 
 .pictoResto {
   width: 8vw;
+}
+
+.detailsBlocks {
+  border: solid 0.1vw var(--black);
+  border-radius: 1vw;
+  padding: 0.5vw;
+  margin-top: 0.5vw;
+}
+
+.detailsBlocks h3 {
+  text-decoration: underline;
+  text-decoration-color: var(--red);
+}
+
+.resume {
+  height: 15vw;
 }

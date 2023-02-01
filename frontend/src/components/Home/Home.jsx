@@ -5,6 +5,7 @@ import axios from "axios";
 import allFood from "../../assets/img/allFood.png";
 import logo01 from "../../assets/img/logo01.png";
 import CardModel from "../cardModel/CardModel";
+import CardCreate from "../cardCreate/cardCreate";
 
 function Home() {
   const [restaurants, setRestaurants] = useState([]);
@@ -21,6 +22,7 @@ function Home() {
     <div className="home">
       <img src={allFood} alt="allFood" className="allFood" />
       <img src={logo01} alt="logo01" className="logo01" />
+      <CardCreate />
       <div className="cardsContainer">
         {restaurants.map((el) => (
           <CardModel
