@@ -43,6 +43,7 @@ function Home() {
             resume={el.resume}
             note={el.note}
             pictoResto="resto01"
+            RestoId={el.id}
           />
         ))}
       </div>

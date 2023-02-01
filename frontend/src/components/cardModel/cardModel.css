@@ -31,7 +31,7 @@
   height: auto;
   text-align: center;
   color: var(--red);
-  font-size: 1.4vw;
+  font-size: 1.3vw;
 }
 .cardModel h1,
 h2,
@@ -80,5 +80,5 @@ h3 {
 }
 
 .resume {
-  height: 15vw;
+  height: 12vw;
 }

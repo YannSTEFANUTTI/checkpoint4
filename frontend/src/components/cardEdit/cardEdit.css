@@ -1,4 +1,4 @@
-.cardCreateContainer {
+.cardEditContainer {
   width: 70vw;
   height: 98vh;
   backdrop-filter: blur(10px);
@@ -17,7 +17,7 @@
   position: fixed;
 }
 
-.cardCreate {
+.cardEdit {
   position: fixed;
   width: 25vw;
   height: auto;
@@ -31,7 +31,7 @@
   font-size: 1vw;
 }
 
-.pictoRestoCreate {
+.pictoRestoEdit {
   width: 8vw;
   height: auto;
 }
@@ -41,7 +41,7 @@
   display: flex;
   justify-content: center;
 }
-.nameCreate {
+.nameEdit {
   color: var(--red);
   text-align: center;
   margin-top: 1vw;
@@ -50,7 +50,7 @@
   color: var(--red);
   font-size: 1.4vw;
 }
-.cardCreate h1,
+.cardEdit h1,
 h2,
 h3,
 p {
@@ -64,13 +64,13 @@ p {
   align-content: center;
 }
 
-.cardCreate p {
+.cardEdit p {
   font-size: 1.3vw;
   text-decoration: underline;
   text-decoration-color: var(--red);
 }
 
-.cardTextCreate {
+.cardTextEdit {
   font-family: var(--text);
   width: 22vw;
   height: auto;
@@ -79,7 +79,7 @@ p {
   justify-content: space-between;
 }
 
-.noteCreate {
+.noteEdit {
   font-size: 1vw;
   color: var(--red);
   text-align: end;
@@ -87,19 +87,19 @@ p {
   height: auto;
 }
 
-.noteCreate input {
+.noteEdit input {
   width: 3vw;
   text-align: center;
 }
 
-.detailsBlocksCreate {
+.detailsBlocksEdit {
   border: solid 0.1vw var(--black);
   border-radius: 1vw;
   padding: 0.5vw;
   margin-top: 0.5vw;
 }
 
-.detailsBlocksCreate h3 {
+.detailsBlocksEdit h3 {
   text-decoration: underline;
   text-decoration-color: var(--red);
 }
@@ -116,16 +116,16 @@ p {
   width: 20vw;
 }
 
-.resumeCreate {
+.resumeEdit {
   height: 10vw;
 }
 
-.resumeCreate textarea {
+.resumeEdit textarea {
   height: 6.5vw;
   width: 20vw;
 }
 
-.cardCreate input,
+.cardEdit input,
 select,
 textarea {
   border: solid 0.07vw var(--black);
@@ -136,11 +136,11 @@ textarea {
   font-size: 0.9vw;
 }
 
-.cardCreate select {
+.cardEdit select {
   width: 12vw;
 }
 
-.cardCreate button {
+.cardEdit button {
   width: auto;
   height: auto;
   border: solid 0.07vw var(--black);
@@ -152,13 +152,13 @@ textarea {
   cursor: pointer;
 }
 
-.closeCrossCreateFlex {
+.closeCrossEditFlex {
   width: 100%;
   display: flex;
   justify-content: flex-end;
 }
 
-.closeCrossCreate {
+.closeCrossEdit {
   cursor: pointer;
   width: 1.3vw;
   height: 1.3vw;
