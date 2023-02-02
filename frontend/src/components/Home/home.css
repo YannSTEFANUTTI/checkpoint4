@@ -87,7 +87,7 @@
   }
 
   .cityFilter {
-    width: 25vw;
+    width: auto;
     height: auto;
     top: 2vw;
     left: 50%;
