@@ -31,11 +31,11 @@ const restaurantController = {
   },
   editRestaurant: (req, res) => {
     const { id } = req.params;
-    const { name, image, address, resume, phone, note } = req.body;
+    const resto = req.body;
     console.warn(req.body);
     console.warn(req.params);
     restaurantModel
-      .editRestaurant(id, name, image, address, resume, phone, note)
+      .editRestaurant(resto, id)
       .then((result) => {
         if (result.affectedRows !== 1) {
           return res.status(404).send(`Restaurant ${id} not found`);
@@ -56,6 +56,12 @@ const restaurantController = {
     restaurantModel
       .deleteRestaurant(id)
       .then(() => res.send("Restaurant deleted"))
+      .catch((err) => res.status(500).send(err));
+  },
+  getCities: (_, res) => {
+    restaurantModel
+      .getCities()
+      .then(([cities]) => res.send(cities))
       .catch((err) => res.status(500).send(err));
   },
 };

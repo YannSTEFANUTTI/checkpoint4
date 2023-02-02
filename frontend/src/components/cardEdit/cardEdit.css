@@ -1,0 +1,171 @@
+.cardEditContainer {
+  width: 70vw;
+  height: 98vh;
+  backdrop-filter: blur(10px);
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 2vw;
+  padding: 0vw;
+  border: solid 0.15vw var(--black);
+  position: fixed;
+}
+
+.cardEdit {
+  position: fixed;
+  width: 25vw;
+  height: auto;
+  border: solid 0.15vw var(--black);
+  background-color: rgb(242, 237, 230, 0.9);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1vw;
+  border-radius: 2vw;
+  font-size: 1vw;
+}
+
+.pictoRestoEdit {
+  width: 8vw;
+  height: auto;
+}
+
+.pictoFlex {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.nameEdit {
+  color: var(--red);
+  text-align: center;
+  margin-top: 1vw;
+  height: auto;
+  text-align: center;
+  color: var(--red);
+  font-size: 1.4vw;
+}
+.cardEdit h1,
+h2,
+h3 {
+  font-family: var(--title);
+  font-weight: 900;
+  padding: 0;
+  margin: 0;
+  margin-top: 0vw;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+}
+
+.cardEdit p {
+  font-size: 1.3vw;
+  text-decoration: underline;
+  text-decoration-color: var(--red);
+}
+
+.cardTextEdit {
+  font-family: var(--text);
+  width: 22vw;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.noteEdit {
+  font-size: 1vw;
+  color: var(--red);
+  text-align: end;
+  margin-top: 0.5vw;
+  height: auto;
+}
+
+.noteEdit input {
+  width: 3vw;
+  text-align: center;
+}
+
+.detailsBlocksEdit {
+  border: solid 0.1vw var(--black);
+  border-radius: 1vw;
+  padding: 0.5vw;
+  margin-top: 0.5vw;
+}
+
+.detailsBlocksEdit h3 {
+  text-decoration: underline;
+  text-decoration-color: var(--red);
+}
+
+.inputAddress {
+  width: 20vw;
+}
+
+.inputCity {
+  width: 20vw;
+}
+
+.inputAddress {
+  width: 20vw;
+}
+
+.resumeEdit {
+  height: 10vw;
+}
+
+.resumeEdit textarea {
+  height: 6.5vw;
+  width: 20vw;
+}
+
+.cardEdit input,
+select,
+textarea {
+  border: solid 0.07vw var(--black);
+  border-radius: 1vw;
+  padding: 0.6vw;
+  margin: 0.3vw;
+  font-family: var(--text);
+  font-size: 0.9vw;
+}
+
+.cardEdit select {
+  width: 12vw;
+}
+
+.cardEdit button {
+  width: auto;
+  height: auto;
+  border: solid 0.07vw var(--black);
+  border-radius: 1vw;
+  padding: 0.5vw;
+  font-size: 1vw;
+  font-family: var(--title);
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.closeCrossEditFlex {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.closeCrossEdit {
+  cursor: pointer;
+  width: 1.3vw;
+  height: 1.3vw;
+  font-size: 1vw;
+  font-family: var(--text);
+  font-weight: 700;
+  border: solid 0.07vw var(--black);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.5vw;
+}
