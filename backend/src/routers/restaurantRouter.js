@@ -20,5 +20,6 @@ restaurantRouter.delete(
   "/restaurants/:id",
   restaurantController.deleteRestaurant
 );
+restaurantRouter.get("/cities", restaurantController.getCities);
 
 module.exports = restaurantRouter;

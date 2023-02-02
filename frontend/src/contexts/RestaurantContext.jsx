@@ -7,6 +7,7 @@ function RestaurantContextProvider({ children }) {
   const { Provider } = RestaurantContext;
   const [CardCreateVisible, setCardCreateVisible] = useState(false);
   const [CardEditVisible, setCardEditVisible] = useState(false);
+  const [CardEditData, setCardEditData] = useState([]);
 
   const switchCreate = () => {
     setCardCreateVisible(!CardCreateVisible);
@@ -15,9 +16,18 @@ function RestaurantContextProvider({ children }) {
     setCardEditVisible(!CardEditVisible);
   };
 
+  console.warn("CardEditVisibbleeeeee", CardEditVisible);
+
   return (
     <Provider
-      value={{ CardCreateVisible, switchCreate, CardEditVisible, switchEdit }}
+      value={{
+        CardCreateVisible,
+        switchCreate,
+        CardEditVisible,
+        switchEdit,
+        CardEditData,
+        setCardEditData,
+      }}
     >
       {children}
     </Provider>

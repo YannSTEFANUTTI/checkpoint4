@@ -11,6 +11,9 @@
   left: 50%;
   transform: translate(-50%, -50%);
   filter: blur(0px);
+  position: fixed;
+  transform-origin: 0% 0%;
+  rotate: 0deg;
 }
 
 .logo01 {
@@ -19,6 +22,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  position: fixed;
 }
 
 .openCreateFlex {
@@ -44,4 +48,22 @@
   font-weight: 900;
   font-family: var(--title);
   text-align: center;
+}
+
+.cityFilter {
+  position: absolute;
+  width: auto;
+  height: auto;
+  top: 19vw;
+  right: 4.7vw;
+  transform: translate(0, 0);
+  cursor: pointer;
+  background-color: var(--yellow);
+  border: solid 0.15vw var(--black);
+  border-radius: 2vw;
+  position: fixed;
+  padding: 1vw;
+  font-family: var(--title);
+  font-weight: 900;
+  font-size: 1.4vw;
 }

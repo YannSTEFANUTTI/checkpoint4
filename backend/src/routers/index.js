@@ -10,6 +10,7 @@ router.get(
   "/restaurants/city/id/:cityId",
   restaurantController.getRestaurantsByCityId
 );
+router.get("/cities", restaurantController.getCities);
 router.put("/restaurants/:id", restaurantController.editRestaurant);
 router.post("/restaurants", restaurantController.addRestaurant);
 router.delete("/restaurants/:id", restaurantController.deleteRestaurant);

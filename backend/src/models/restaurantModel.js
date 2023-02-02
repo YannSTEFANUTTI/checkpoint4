@@ -5,20 +5,20 @@ const db = connexion.promise();
 
 const getRestaurants = () => {
   return db.query(
-    "SELECT restaurant.id, name, image, address, resume, phone, note, city  FROM restaurant INNER JOIN city ON restaurant.city_id = city.id"
+    "SELECT restaurant.id, name, image, address, resume, phone, note, city, city_id  FROM restaurant INNER JOIN city ON restaurant.city_id = city.id"
   );
 };
 
 const getRestaurantsById = (id) => {
   return db.query(
-    "SELECT restaurant.id, name, image, address, resume, phone, note, city FROM restaurant INNER JOIN city ON restaurant.city_id = city.id WHERE restaurant.id = ?",
+    "SELECT restaurant.id, name, image, address, resume, phone, note, city, city_id FROM restaurant INNER JOIN city ON restaurant.city_id = city.id WHERE restaurant.id = ?",
     [id]
   );
 };
 
 const getRestaurantsByCity = (city) => {
   return db.query(
-    "SELECT restaurant.id, name, image, address, resume, phone, note, city FROM restaurant INNER JOIN city ON restaurant.city_id = city.id WHERE city.city = ?",
+    "SELECT restaurant.id, name, image, address, resume, phone, note, city, city_id FROM restaurant INNER JOIN city ON restaurant.city_id = city.id WHERE city.city = ?",
     [city]
   );
 };
@@ -47,11 +47,16 @@ const deleteRestaurant = (id) => {
   return db.query("DELETE FROM restaurant WHERE id = ?", [id]);
 };
 
+const getCities = () => {
+  return db.query("SELECT * FROM city");
+};
+
 module.exports = {
   getRestaurants,
   getRestaurantsById,
   getRestaurantsByCity,
   getRestaurantsByCityId,
+  getCities,
   editRestaurant,
   addRestaurant,
   deleteRestaurant,

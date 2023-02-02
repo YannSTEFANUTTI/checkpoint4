@@ -1,20 +1,21 @@
 /* eslint-disable import/no-unresolved */
 import axios from "axios";
 import { useState } from "react";
-import propTypes from "prop-types";
+import Proptypes from "prop-types";
 import { useRestaurantContext } from "../../contexts/RestaurantContext";
 import resto01 from "../../assets/img/resto01.png";
 import "./cardEdit.css";
 
-function CardEdit({ name, adress, phone, resume, note, RestoId }) {
+function CardEdit({ CardEditData }) {
   const { switchEdit } = useRestaurantContext();
   const [restaurant, setRestaurant] = useState({
-    name: `${name}`,
-    address: `${adress}`,
-    resume: `${resume}`,
-    note: `${note}`,
-    phone: `${phone}`,
-    city_id: `${RestoId}`,
+    name: CardEditData.name,
+    address: CardEditData.address,
+    resume: CardEditData.resume,
+    note: CardEditData.note,
+    phone: CardEditData.phone,
+    city_id: CardEditData.city_id,
+    id: CardEditData.RestoId,
   });
   const handleChange = (event) => {
     setRestaurant({ ...restaurant, [event.target.name]: event.target.value });
@@ -23,7 +24,7 @@ function CardEdit({ name, adress, phone, resume, note, RestoId }) {
   const handleSubmit = (event) => {
     event.preventDefault();
     axios
-      .post("http://localhost:5000/restaurants", {
+      .put(`http://localhost:5000/restaurants/${restaurant.id}`, {
         name: restaurant.name,
         image: 1,
         address: restaurant.address,
@@ -31,6 +32,7 @@ function CardEdit({ name, adress, phone, resume, note, RestoId }) {
         phone: restaurant.phone,
         note: restaurant.note,
         city_id: restaurant.city_id,
+        id: restaurant.id,
       })
       .then((response) => {
         console.warn(response.data);
@@ -38,7 +40,6 @@ function CardEdit({ name, adress, phone, resume, note, RestoId }) {
       .catch((error) => {
         console.error(error);
       });
-    window.location.reload();
   };
 
   return (
@@ -68,7 +69,7 @@ function CardEdit({ name, adress, phone, resume, note, RestoId }) {
               <input
                 type="text"
                 name="name"
-                value={restaurant.name}
+                placeholder={CardEditData.name}
                 onChange={handleChange}
               />
             </h2>
@@ -78,7 +79,7 @@ function CardEdit({ name, adress, phone, resume, note, RestoId }) {
                 className="inputAddress"
                 type="text"
                 name="address"
-                value={restaurant.address}
+                placeholder={CardEditData.address}
                 onChange={handleChange}
               />
               <p>
@@ -87,7 +88,9 @@ function CardEdit({ name, adress, phone, resume, note, RestoId }) {
                   name="city_id"
                   onChange={handleChange}
                 >
-                  <option value="0">Ville</option>
+                  <option value={CardEditData.city_id}>
+                    {CardEditData.city}
+                  </option>
                   <option value="1">Narbonne</option>
                   <option value="2">Paris</option>
                   <option value="3">Pessac</option>
@@ -101,7 +104,7 @@ function CardEdit({ name, adress, phone, resume, note, RestoId }) {
               <input
                 type="text"
                 name="phone"
-                value={restaurant.phone}
+                placeholder={CardEditData.phone}
                 onChange={handleChange}
               />
             </div>
@@ -110,7 +113,7 @@ function CardEdit({ name, adress, phone, resume, note, RestoId }) {
               <textarea
                 type="text"
                 name="resume"
-                value={restaurant.resume}
+                placeholder={CardEditData.resume}
                 onChange={handleChange}
               />
             </div>
@@ -120,7 +123,7 @@ function CardEdit({ name, adress, phone, resume, note, RestoId }) {
                 <input
                   type="number"
                   name="note"
-                  value={restaurant.note}
+                  placeholder={CardEditData.note}
                   onChange={handleChange}
                 />
                 /20
@@ -137,11 +140,7 @@ function CardEdit({ name, adress, phone, resume, note, RestoId }) {
 }
 
 export default CardEdit;
+
 CardEdit.propTypes = {
-  name: propTypes.string.isRequired,
-  adress: propTypes.string.isRequired,
-  phone: propTypes.string.isRequired,
-  resume: propTypes.string.isRequired,
-  note: propTypes.string.isRequired,
-  RestoId: propTypes.string.isRequired,
+  CardEditData: Proptypes.string.isRequired,
 };

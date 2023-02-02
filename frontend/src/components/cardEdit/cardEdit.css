@@ -2,7 +2,6 @@
   width: 70vw;
   height: 98vh;
   backdrop-filter: blur(10px);
-  position: absolute;
   z-index: 2;
   display: flex;
   justify-content: center;
@@ -52,8 +51,7 @@
 }
 .cardEdit h1,
 h2,
-h3,
-p {
+h3 {
   font-family: var(--title);
   font-weight: 900;
   padding: 0;

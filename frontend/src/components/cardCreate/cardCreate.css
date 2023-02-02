@@ -52,8 +52,7 @@
 }
 .cardCreate h1,
 h2,
-h3,
-p {
+h3 {
   font-family: var(--title);
   font-weight: 900;
   padding: 0;

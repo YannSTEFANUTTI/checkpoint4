@@ -58,6 +58,12 @@ const restaurantController = {
       .then(() => res.send("Restaurant deleted"))
       .catch((err) => res.status(500).send(err));
   },
+  getCities: (_, res) => {
+    restaurantModel
+      .getCities()
+      .then(([cities]) => res.send(cities))
+      .catch((err) => res.status(500).send(err));
+  },
 };
 
 module.exports = restaurantController;
