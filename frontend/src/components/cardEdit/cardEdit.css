@@ -162,10 +162,134 @@ textarea {
   height: 1.3vw;
   font-size: 1vw;
   font-family: var(--text);
-  font-weight: 700;
+  font-weight: 600;
   border: solid 0.07vw var(--black);
+  color: var(--black);
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 0.5vw;
+}
+
+@media screen and (max-width: 800px) {
+  .cardEditContainer {
+    width: 90vw;
+    height: 100vh;
+    padding: 0vw;
+    position: fixed;
+  }
+
+  .cardEdit {
+    position: fixed;
+    width: 80vw;
+    height: auto;
+    background-color: rgb(242, 237, 230, 0.8);
+    padding: 1vw;
+    border-radius: 3vw;
+    font-size: 5vw;
+  }
+
+  .pictoRestoEdit {
+    width: 25vw;
+    height: auto;
+  }
+
+  .nameEdit {
+    margin-top: 2vw;
+    height: auto;
+    font-size: 5vw;
+  }
+  .cardEdit h1,
+  h2,
+  h3 {
+    padding: 0;
+    margin: 0;
+    margin-top: 0vw;
+    font-size: 4.5vw;
+  }
+
+  .cardEdit p {
+    font-size: 4vw;
+  }
+
+  .cardTextEdit {
+    font-family: var(--text);
+    width: 73vw;
+    height: auto;
+  }
+
+  .noteEdit {
+    font-size: 5.5vw;
+    margin-top: 0.5vw;
+    height: auto;
+  }
+
+  .noteEdit input {
+    width: 13vw;
+    height: 5.5vw;
+  }
+
+  .detailsBlocksEdit {
+    border-radius: 2vw;
+    padding: 0.5vw;
+    margin-top: 2vw;
+  }
+
+  .detailsBlocksEdit input {
+    width: 95%;
+  }
+
+  .inputAddress {
+    width: 50vw;
+    height: auto;
+  }
+
+  .inputCity {
+    width: 50vw;
+  }
+
+  .resumeEdit {
+    height: 60vw;
+  }
+
+  .resumeEdit textarea {
+    height: 50vw;
+    width: 70vw;
+    font-size: 4vw;
+  }
+
+  .cardEdit input,
+  textarea {
+    border-radius: 3vw;
+    padding: 2vw;
+    margin: 1vw;
+    font-size: 4vw;
+  }
+
+  .cardEdit select {
+    width: 90%;
+    font-size: 4vw;
+    margin-left: 2vw;
+  }
+
+  .cardEdit button {
+    width: auto;
+    height: auto;
+    border-radius: 3vw;
+    padding: 2vw;
+    font-size: 4.5vw;
+    margin-bottom: 2vw;
+  }
+  .closeCrossEditFlex {
+    width: 100%;
+    gap: 0.3vw;
+  }
+
+  .closeCrossEdit {
+    width: 5vw;
+    height: auto;
+    font-size: 3vw;
+    margin-top: 2vw;
+    margin-right: 2vw;
+  }
 }

@@ -10,19 +10,31 @@ import CardEdit from "../cardEdit/CardEdit";
 import { useRestaurantContext } from "../../contexts/RestaurantContext";
 
 function Home() {
-  const { CardCreateVisible, switchCreate, CardEditVisible, CardEditData } =
-    useRestaurantContext();
+  const {
+    CardCreateVisible,
+    switchCreate,
+    CardEditVisible,
+    CardEditData,
+    cities,
+  } = useRestaurantContext();
   const [restaurants, setRestaurants] = useState([]);
   const [city, setCity] = useState("0");
+
   useEffect(() => {
     axios.get("http://localhost:5000/restaurants").then((response) => {
       setRestaurants(response.data);
     });
-  }, [switchCreate]);
+  }, [restaurants]);
 
   const selectCity = (e) => {
-    setCity(e.target.value);
+    const cityValue = e.target.value;
+    if (cityValue === "Ville") {
+      setCity("0");
+    } else {
+      setCity(e.target.value);
+    }
   };
+
   return (
     <div className="home">
       <img src={allFood} alt="allFood" className="allFood" />
@@ -30,13 +42,11 @@ function Home() {
       {CardCreateVisible && <CardCreate />}
       {CardEditVisible && <CardEdit CardEditData={CardEditData} />}
       <select className="cityFilter" name="cityFilter" onChange={selectCity}>
-        <option value="0">Ville</option>
-        <option value="Narbonne">Narbonne</option>
-        <option value="Paris">Paris</option>
-        <option value="Pessac">Pessac</option>
-        <option value="Bègles">Bègles</option>
-        <option value="Cergy">Cergy</option>
+        {cities.map((el) => (
+          <option value={el.city}>{el.city}</option>
+        ))}
       </select>
+
       <div
         className="openCreateFlex"
         onClick={switchCreate}
