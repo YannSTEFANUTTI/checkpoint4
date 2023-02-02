@@ -29,9 +29,8 @@
   position: absolute;
   width: auto;
   height: auto;
-  top: 50%;
-  right: 0;
-  transform: translate(-50%, 0);
+  top: 50vh;
+  right: 4.7vw;
   cursor: pointer;
   background-color: var(--yellow);
   border: solid 0.15vw var(--black);
@@ -54,9 +53,8 @@
   position: absolute;
   width: auto;
   height: auto;
-  top: 19vw;
+  top: 3vh;
   right: 4.7vw;
-  transform: translate(0, 0);
   cursor: pointer;
   background-color: var(--yellow);
   border: solid 0.15vw var(--black);
@@ -66,4 +64,35 @@
   font-family: var(--title);
   font-weight: 900;
   font-size: 1.4vw;
+}
+
+@media screen and (max-width: 800px) {
+  .openCreateFlex {
+    position: absolute;
+    width: 20vw;
+    height: auto;
+    top: 2vw;
+    right: 2vw;
+    padding: 1vw;
+    position: fixed;
+    z-index: 1;
+  }
+
+  .openCreate {
+    font-size: 3.5vw;
+    font-weight: 900;
+    font-family: var(--title);
+    text-align: center;
+  }
+
+  .cityFilter {
+    width: 25vw;
+    height: auto;
+    top: 2vw;
+    left: 50%;
+    transform: translate(-50%, 0);
+    padding: 1vw;
+    font-size: 5vw;
+    z-index: 1;
+  }
 }

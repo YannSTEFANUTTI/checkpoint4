@@ -80,7 +80,7 @@ function CardModel({
             <p>{resume}</p>
           </div>
           <div className="note">
-            <h3>{note}/20</h3>
+            <h4>{note}/20</h4>
           </div>
         </div>
       </div>
