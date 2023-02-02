@@ -12,7 +12,6 @@
   transform: translate(-50%, -50%);
   filter: blur(0px);
   position: fixed;
-  transform-origin: 0% 0%;
   rotate: 0deg;
 }
 
@@ -40,6 +39,7 @@
   align-items: center;
   position: fixed;
   padding: 1vw;
+  z-index: 1;
 }
 
 .openCreate {
@@ -64,6 +64,7 @@
   font-family: var(--title);
   font-weight: 900;
   font-size: 1.4vw;
+  z-index: 1;
 }
 
 @media screen and (max-width: 800px) {
@@ -94,5 +95,19 @@
     padding: 1vw;
     font-size: 5vw;
     z-index: 1;
+  }
+
+  .logo01 {
+    width: 50vw;
+  }
+
+  .allFood {
+    width: 180%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    filter: blur(0px);
+    position: fixed;
+    rotate: 0deg;
   }
 }

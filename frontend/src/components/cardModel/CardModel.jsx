@@ -45,7 +45,7 @@ function CardModel({
 
   return (
     <div>
-      <div className="cardModel">
+      <div className={`cardModel  EachCard${RestoId}`}>
         <div className="closeCrossCreateFlex">
           <img
             src={setting}

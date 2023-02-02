@@ -23,6 +23,7 @@
   align-items: center;
   padding: 1vw;
   border-radius: 2vw;
+  scale: 1;
 }
 .name {
   color: var(--red);
