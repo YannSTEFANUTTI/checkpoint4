@@ -155,6 +155,7 @@ textarea {
   width: 100%;
   display: flex;
   justify-content: flex-end;
+  gap: 0.3vw;
 }
 
 .closeCrossCreate {
@@ -163,9 +164,10 @@ textarea {
   height: 1.3vw;
   font-size: 1vw;
   font-family: var(--text);
-  font-weight: 700;
+  font-weight: 600;
   border: solid 0.07vw var(--black);
   display: flex;
+  color: var(--black);
   justify-content: center;
   align-items: center;
   border-radius: 0.5vw;

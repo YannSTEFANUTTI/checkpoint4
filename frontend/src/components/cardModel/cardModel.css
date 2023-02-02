@@ -82,3 +82,12 @@ h3 {
 .resume {
   height: 12vw;
 }
+
+.settingModel {
+  cursor: pointer;
+  width: 1.3vw;
+  height: 1.3vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

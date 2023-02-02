@@ -1,4 +1,5 @@
-import { createContext, useContext, useState } from "react";
+import { createContext, useContext, useState, useEffect } from "react";
+import axios from "axios";
 import propTypes from "prop-types";
 
 const RestaurantContext = createContext();
@@ -8,6 +9,13 @@ function RestaurantContextProvider({ children }) {
   const [CardCreateVisible, setCardCreateVisible] = useState(false);
   const [CardEditVisible, setCardEditVisible] = useState(false);
   const [CardEditData, setCardEditData] = useState([]);
+  const [cities, setCities] = useState([]);
+
+  useEffect(() => {
+    axios.get("http://localhost:5000/cities").then((response) => {
+      setCities(response.data);
+    });
+  }, []);
 
   const switchCreate = () => {
     setCardCreateVisible(!CardCreateVisible);
@@ -15,8 +23,6 @@ function RestaurantContextProvider({ children }) {
   const switchEdit = () => {
     setCardEditVisible(!CardEditVisible);
   };
-
-  console.warn("CardEditVisibbleeeeee", CardEditVisible);
 
   return (
     <Provider
@@ -27,6 +33,7 @@ function RestaurantContextProvider({ children }) {
         switchEdit,
         CardEditData,
         setCardEditData,
+        cities,
       }}
     >
       {children}

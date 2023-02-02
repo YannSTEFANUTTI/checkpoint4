@@ -6,7 +6,7 @@ import resto01 from "../../assets/img/resto01.png";
 import "./cardCreate.css";
 
 function CardCreate() {
-  const { CardCreateVisible, switchCreate } = useRestaurantContext();
+  const { switchCreate } = useRestaurantContext();
   const [restaurant, setRestaurant] = useState({
     name: "",
     address: "",
@@ -18,8 +18,6 @@ function CardCreate() {
   const handleChange = (event) => {
     setRestaurant({ ...restaurant, [event.target.name]: event.target.value });
   };
-
-  console.warn(CardCreateVisible);
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -39,7 +37,6 @@ function CardCreate() {
       .catch((error) => {
         console.error(error);
       });
-    window.location.reload();
   };
 
   return (

@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import axios from "axios";
 import { useRestaurantContext } from "../../contexts/RestaurantContext";
 import resto01 from "../../assets/img/resto01.png";
+import setting from "../../assets/img/setting.png";
 import "./cardModel.css";
 
 function CardModel({
@@ -46,13 +47,13 @@ function CardModel({
     <div>
       <div className="cardModel">
         <div className="closeCrossCreateFlex">
-          <div
-            className="closeCrossCreate"
+          <img
+            src={setting}
+            alt="setting"
+            className="settingModel"
             onClick={setData}
             role="presentation"
-          >
-            C
-          </div>
+          />
           <div
             className="closeCrossCreate"
             onClick={() => handleDelete(RestoId)}
